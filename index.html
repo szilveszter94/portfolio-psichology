@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Pszichológus Budapest | Vezetéknév Bianka</title>
+
+    <meta
+      name="description"
+      content="Vezetéknév Bianka okleveles pszichológus Budapesten. Szorongáskezelés, stresszoldás, párterápia és egyéni tanácsadás bizalmas környezetben." />
+
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Pszichológus Budapest | Vezetéknév Bianka" />
+    <meta
+      property="og:description"
+      content="Okleveles pszichológus Budapesten – pszichológiai tanácsadás felnőtteknek és pároknak." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.hu" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Psychologist",
+        "name": "Vezetéknév Bianka",
+        "url": "https://yourdomain.hu",
+        "telephone": "+36301234567",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1051 Budapest",
+          "addressLocality": "Budapest",
+          "postalCode": "1051",
+          "addressCountry": "HU"
+        },
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": "Budapest"
+        }
+      }
+    </script>
+
+    <style>
+      :root {
+        --bg-main: #f6f4f1; /* warm light background */
+        --bg-card: #ffffff; /* paper-like surface */
+        --bg-card-secondary: #3df1060e; /* paper-like surface */
+        --text-main: #2e2c2a; /* soft dark text */
+        --text-muted: #6f6b66; /* gentle muted text */
+        --accent: #b9a89a; /* warm beige accent */
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+        color: var(--text-main);
+        line-height: 1.8;
+        background-color: var(--bg-main);
+        background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 60%),
+          radial-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+        background-size: 100% 100%, 60px 60px;
+      }
+
+      .nav-links a,
+      p {
+        font-family: "Open Sans", sans-serif;
+      }
+
+      nav {
+        position: relative; /* non-sticky */
+        background-color: var(--bg-main);
+        display: flex;
+        gap: 4rem;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem 3rem; /* taller navbar */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .nav-logo {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .nav-logo img {
+        height: 150px;
+        width: auto;
+      }
+
+      .nav-title {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.2;
+      }
+
+      .nav-title .first-name,
+      .nav-title .last-name {
+        font-family: "Raleway", sans-serif;
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: var(--accent);
+
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        width: 200px;
+      }
+
+      .nav-title .first-name,
+      .nav-title .last-name {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        line-height: 1.1;
+      }
+
+      .nav-title .profession {
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: var(--text-muted);
+        text-align: center;
+        margin-top: 0.1rem;
+      }
+
+      .nav-title .profession {
+        font-family: "Open Sans", sans-serif;
+        font-size: 0.9rem;
+        font-weight: 400;
+        color: var(--text-muted);
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2.5rem;
+      }
+
+      .nav-links a {
+        color: var(--text-main);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.2rem; /* bigger nav items */
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--accent);
+      }
+
+      /* Mobile: stack logo + links vertically */
+      @media (max-width: 600px) {
+        nav {
+          flex-direction: column;
+          align-items: center;
+          gap: 0.8rem;
+          padding: 1rem 1.5rem;
+        }
+
+        .nav-logo {
+          flex-direction: column;
+          gap: 0.5rem;
+          text-align: center;
+        }
+
+        .nav-logo img {
+          height: 60px;
+        }
+
+        .nav-links {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .nav-links a {
+          font-size: 1rem;
+        }
+      }
+
+      section,
+      footer {
+        margin: auto;
+      }
+
+      section.primary {
+        background-color: var(--bg-card-secondary);
+      }
+
+      .site-footer {
+        background-color: var(--bg-card); /* calm light tone */
+        color: #6f6b66;
+        padding: 3rem 2rem 2rem 2rem;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .footer-section h4 {
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: #2e4d35;
+        margin-bottom: 0.8rem;
+      }
+
+      .footer-section p,
+      .footer-section li {
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      .footer-section a {
+        color: #2e4d35;
+        text-decoration: none;
+      }
+
+      .footer-section a:hover {
+        text-decoration: underline;
+      }
+
+      .footer-section ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .footer-bottom {
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #9a948d;
+      }
+
+      /* Mobile */
+      @media (max-width: 700px) {
+        .footer-container {
+          flex-direction: column;
+          gap: 1.5rem;
+        }
+      }
+
+      header {
+        padding-top: 5rem;
+        padding-bottom: 4rem;
+      }
+
+      .hero {
+        position: relative;
+        width: 100%;
+        height: 80vh; /* adjust for desired hero height */
+        background-image: url("home.webp"); /* your top section image */
+        background-size: cover; /* fill container, maintain aspect ratio */
+        background-position: center; /* center focal point */
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30%;
+        height: 100%;
+        background-color: rgba(246, 244, 241, 0.2); /* optional light overlay for readability */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* left align text */
+        justify-content: center;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-family: "Raleway", sans-serif;
+        font-size: 3rem;
+        font-weight: 700;
+        color: #2e4d35; /* dark green */
+      }
+
+      .hero p {
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.3rem;
+        color: #6f6b66; /* soft grey */
+        max-width: 500px; /* optional line limit for readability */
+      }
+
+      h1,
+      h2 {
+        color: var(--accent);
+        font-weight: 500;
+        letter-spacing: 0.02em;
+      }
+
+      h1 {
+        font-size: 2.4rem;
+        margin-bottom: 1.5rem;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        color: var(--accent);
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+      }
+
+      p {
+        color: var(--text-muted);
+        margin: 0.5rem 0 0;
+      }
+
+      a {
+        color: var(--text-main);
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+
+      a:hover {
+        opacity: 0.8;
+      }
+
+      iframe {
+        border-radius: 12px;
+      }
+
+      footer {
+        text-align: center;
+        color: var(--text-muted);
+        font-size: 0.85rem;
+        padding-bottom: 3rem;
+      }
+
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 1.9rem;
+        }
+
+        header,
+        section {
+          padding: 2rem 1.2rem;
+        }
+      }
+
+      #snackbar {
+        visibility: hidden;
+        min-width: 280px;
+        background-color: #2e4d35; /* dark green */
+        color: #fff;
+        text-align: center;
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+
+        position: fixed;
+        left: 50%;
+        bottom: 30px;
+        transform: translateX(-50%);
+        z-index: 9999;
+
+        font-size: 0.95rem;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      #snackbar.show {
+        visibility: visible;
+        animation: fadein 0.3s ease, fadeout 0.3s ease 3s;
+      }
+
+      @keyframes fadein {
+        from {
+          opacity: 0;
+          bottom: 10px;
+        }
+        to {
+          opacity: 1;
+          bottom: 30px;
+        }
+      }
+
+      @keyframes fadeout {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+
+      #kapcsolat {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        padding: 4rem 5rem;
+        background-color: #f7f5f2; /* light calm background */
+      }
+
+      #kapcsolat h2 {
+        grid-column: 1 / -1; /* full width title */
+        font-family: "Raleway", sans-serif;
+        font-weight: 300;
+        font-size: 2.2rem;
+        color: #2e4d35;
+        margin-bottom: 2rem;
+      }
+
+      /* Left column - form */
+      #contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+      }
+
+      /* Right column - info + map */
+      #kapcsolat p,
+      #kapcsolat iframe {
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+        color: #6f6b66;
+      }
+
+      /* Mobile responsive */
+      @media (max-width: 900px) {
+        #kapcsolat {
+          grid-template-columns: 1fr; /* stack columns */
+          padding: 2.5rem 2rem;
+        }
+
+        #kapcsolat iframe {
+          height: 250px;
+        }
+      }
+
+      form#contact-form {
+        max-width: 620px;
+        background-color: #ffffff;
+        padding: 2.5rem 2.8rem;
+        border-radius: 18px;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+
+        display: flex;
+        flex-direction: column;
+        gap: 1.4rem;
+      }
+
+      /* Labels */
+      form#contact-form .input-label {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #3e3e3e;
+        gap: 0.35rem;
+      }
+
+      /* Inputs & textarea */
+      form#contact-form input,
+      form#contact-form textarea {
+        font-family: "Open Sans", sans-serif;
+        font-size: 1rem;
+        padding: 0.65rem 0.75rem;
+        border-radius: 8px;
+        border: 1px solid #dcdcdc;
+        transition: border-color 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      /* Textarea */
+      form#contact-form textarea {
+        min-height: 110px;
+        resize: vertical;
+      }
+
+      /* Focus state */
+      form#contact-form input:focus,
+      form#contact-form textarea:focus {
+        outline: none;
+        border-color: #2e4d35; /* dark green */
+        box-shadow: 0 0 0 2px rgba(46, 77, 53, 0.15);
+      }
+
+      /* Submit button */
+      form#contact-form button {
+        margin-top: 0.5rem;
+        align-self: flex-start;
+
+        background-color: #2e4d35;
+        color: #ffffff;
+        font-size: 0.95rem;
+        font-weight: 500;
+        padding: 0.65rem 1.8rem;
+
+        border: none;
+        border-radius: 999px;
+        cursor: pointer;
+
+        transition: background-color 0.25s ease, transform 0.15s ease;
+      }
+
+      /* Button hover */
+      form#contact-form button:hover {
+        background-color: #24402c;
+        transform: translateY(-1px);
+      }
+
+      /* Button active */
+      form#contact-form button:active {
+        transform: translateY(0);
+      }
+
+      label .gdpr-checkbox {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.75rem;
+        color: #6f6b66;
+        line-height: 1.4;
+      }
+
+      .gdpr-checkbox a {
+        color: #2e4d35;
+        text-decoration: underline;
+      }
+
+      /* Mobile */
+      @media (max-width: 600px) {
+        form#contact-form {
+          padding: 2rem 1.6rem;
+        }
+      }
+
+      .split-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* two equal columns */
+        gap: 1rem; /* space between columns */
+        justify-content: center; /* center the whole grid */
+        margin: 0 auto; /* center the section in the viewport */
+        min-height: 70vh;
+        padding: 4rem 2rem; /* optional inner padding */
+      }
+
+      .split-image {
+        display: flex;
+        justify-content: center; /* center horizontally */
+        align-items: center;
+        padding: 2rem; /* optional spacing around image */
+      }
+
+      .split-image img {
+        max-width: 80%; /* not full-width, adjust as needed */
+        height: auto;
+        border-radius: 25px; /* rounded corners for friendly look */
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); /* soft shadow for depth */
+        object-fit: cover;
+      }
+
+      /* responsive adjustments */
+      @media (max-width: 900px) {
+        .split-image img {
+          max-width: 95%; /* almost full width on mobile */
+        }
+      }
+
+      /* Content column */
+      .split-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 4rem 5rem;
+      }
+
+      .split-content.left {
+        align-items: start;
+        text-align: start;
+      }
+
+      .split-content.right {
+        align-items: end;
+        text-align: end;
+      }
+
+      .split-content h2 {
+        font-family: "Raleway", sans-serif;
+        font-size: 2.2rem;
+        font-weight: 300;
+        color: #2e4d35;
+        margin-bottom: 1rem;
+      }
+
+      .split-content p {
+        font-size: 1rem;
+        color: #6f6b66;
+        max-width: 480px;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-logo">
+        <img src="logo.png" alt="Vezetéknév Bianka Logo" />
+        <div class="nav-title">
+          <span class="name">
+            <span class="first-name">Vezetéknév</span>
+            <span class="last-name">Bianka</span>
+          </span>
+          <span class="profession">Pszichológus & Terapeuta</span>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="#bemutatkozas">Bemutatkozás</a>
+        <a href="#szolgaltatasok">Szolgáltatások</a>
+        <a href="#folyamat">Folyamat</a>
+        <a href="#kapcsolat">Kapcsolat</a>
+      </div>
+    </nav>
+    <header class="hero">
+      <div class="hero-overlay">
+        <h1>Vezetéknév Bianka, Pszichológus.</h1>
+        <p>
+          Okleveles pszichológusként Budapesten segítem klienseimet abban, hogy jobban megértsék önmagukat, csökkentsék
+          a lelki terheiket és megtalálják a számukra megfelelő megoldásokat.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section id="bemutatkozas" class="split-section primary">
+        <div class="split-image">
+          <img src="illustration1.png" alt="Bemutatkozás" />
+        </div>
+
+        <div class="split-content right">
+          <h2>Bemutatkozás</h2>
+          <p>
+            Vezetéknév Bianka vagyok, okleveles pszichológus. Munkám során biztonságos, elfogadó és bizalmas légkört
+            biztosítok, ahol a kliensek saját tempójukban dolgozhatnak aktuális nehézségeiken.
+          </p>
+        </div>
+      </section>
+
+      <section id="szolgaltatasok" class="split-section secondary">
+        <div class="split-content left">
+          <h2>Szolgáltatások</h2>
+
+          <h3>Szorongás és stressz kezelése</h3>
+          <p>Segítség nyújtása szorongásos tünetek, tartós stressz, kimerültség és életvezetési nehézségek esetén.</p>
+
+          <h3>Párterápia</h3>
+          <p>Kommunikációs problémák, konfliktusok, elakadások feldolgozása párkapcsolati tanácsadás keretében.</p>
+
+          <h3>Egyéni pszichológiai tanácsadás</h3>
+          <p>Önismereti munka, érzelmi nehézségek feldolgozása, személyes fejlődés támogatása.</p>
+        </div>
+        <div class="split-image">
+          <img src="illustration13.png" alt="Szolgaltatasok" />
+        </div>
+      </section>
+
+      <section id="folyamat" class="split-section primary">
+        <div class="split-image">
+          <img src="illustration15.jpg" alt="Bemutatkozás" />
+        </div>
+
+        <div class="split-content right">
+          <h2>Hogyan zajlik a terápia?</h2>
+          <p>
+            Az első alkalom során közösen áttekintjük a felmerülő problémákat és meghatározzuk a terápiás célokat. A
+            folyamat az Ön igényeihez és lehetőségeihez igazodik.
+          </p>
+        </div>
+      </section>
+
+      <section id="kapcsolat">
+        <h2>Kapcsolat</h2>
+
+        <!-- Left column -->
+        <form id="contact-form" action="https://formspree.io/f/xnjjjpgz" method="POST" novalidate>
+          <label class="input-label">
+            Név
+            <input type="text" name="name" required />
+          </label>
+
+          <label class="input-label">
+            Email
+            <input type="email" name="email" required />
+          </label>
+
+          <label class="input-label">
+            Telefonszám
+            <input type="text" name="phone" />
+          </label>
+
+          <label class="input-label">
+            Üzenet
+            <textarea name="message" required></textarea>
+          </label>
+
+          <label class="gdpr-checkbox">
+            <input type="checkbox" name="gdpr" required />
+            <span>
+              Elolvastam és elfogadom az
+              <a href="/docs/adatkezelesi-tajekoztato.pdf" target="_blank"> adatkezelési tájékoztatót </a>.
+            </span>
+          </label>
+
+          <button type="submit">Üzenet küldése</button>
+        </form>
+
+        <!-- Right column -->
+        <div class="contact-info">
+          <p>
+            <strong>Vezetéknév Bianka – pszichológus</strong><br />
+            📍 1051 Budapest<br />
+            📞 +36 30 123 4567<br />
+            📧 <a href="mailto:kapcsolat@yourdomain.hu">kapcsolat@yourdomain.hu</a>
+          </p>
+
+          <iframe
+            title="Pszichológus rendelő Budapest térkép"
+            src="https://www.google.com/maps?q=1051+Budapest&output=embed"
+            width="100%"
+            height="300"
+            style="border: 0; margin-top: 1rem"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </section>
+      <div id="snackbar">Üzenet sikeresen elküldve 🌿</div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <!-- Contact info -->
+        <div class="footer-section">
+          <h4>Kapcsolat</h4>
+          <p>📧 <a href="mailto:info@tothadrienn.com">info@bianka.com</a></p>
+          <p>🏠 1025 Budapest, Valami Ö. Valami u. x. II. em.</p>
+          <p>🏠 1025 Budapest, Valami u. 51. mfsz. 8.</p>
+        </div>
+
+        <!-- Useful links -->
+        <div class="footer-section">
+          <h4>Hasznos információk</h4>
+          <ul>
+            <li><a href="/docs/adatkezelesi-tajekoztato.pdf" target="_blank">Adatkezelési tájékoztató</a></li>
+            <li><a href="/impresszum">Impresszum</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom">
+          <p>Bianka. © <span id="current-year"></span> Minden jog fenntartva.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+    <script>
+      const form = document.getElementById("contact-form");
+      const snackbar = document.getElementById("snackbar");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+
+        const formData = new FormData(form);
+
+        try {
+          const response = await fetch(form.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+              Accept: "application/json",
+            },
+          });
+
+          if (response.ok) {
+            form.reset();
+            showSnackbar("Üzenet sikeresen elküldve 🌿");
+          } else {
+            showSnackbar("Hiba történt. Kérlek próbáld újra.");
+          }
+        } catch (error) {
+          showSnackbar("Nem sikerült elküldeni az üzenetet.");
+        }
+      });
+
+      function showSnackbar(message) {
+        snackbar.textContent = message;
+        snackbar.classList.add("show");
+
+        setTimeout(() => {
+          snackbar.classList.remove("show");
+        }, 3500);
+      }
+    </script>
+    <script>
+      document.querySelectorAll("nav a").forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const target = document.querySelector(link.getAttribute("href"));
+          target.scrollIntoView({ behavior: "smooth" });
+        });
+      });
+    </script>
+  </body>
+</html>
