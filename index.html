@@ -45,6 +45,7 @@
     </script>
 
     <style>
+      /* -------------- COMMON START ---------------- */
       :root {
         --bg-main: #f6f4f1; /* warm light background */
         --bg-card: #ffffff; /* paper-like surface */
@@ -69,10 +70,55 @@
         background-size: 100% 100%, 60px 60px;
       }
 
+      h1,
+      h2 {
+        color: var(--accent);
+        font-weight: 500;
+        letter-spacing: 0.02em;
+      }
+
+      h1 {
+        font-size: 2.4rem;
+        margin-bottom: 1.5rem;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        color: var(--accent);
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+      }
+
+      p {
+        color: var(--text-muted);
+        margin: 0.5rem 0 0;
+      }
+
+      a {
+        color: var(--text-main);
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+
+      a:hover {
+        opacity: 0.8;
+      }
+
+      iframe {
+        border-radius: 12px;
+      }
+
       .nav-links a,
       p {
         font-family: "Open Sans", sans-serif;
       }
+
+      /* -------------- COMMON END ---------------- */
 
       /* -------------- NAVBAR START ---------------- */
 
@@ -225,6 +271,89 @@
 
       /* -------------- NAVBAR END ---------------- */
 
+      /* -------------- HERO START ---------------- */
+
+      .hero {
+        min-height: auto;
+        padding: 0;
+        position: relative;
+        background-image: url("home.png");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+      }
+
+      /* overlay panel */
+      .hero-overlay {
+        width: min(520px, 90%);
+        padding: 3rem 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.5rem;
+      }
+
+      /* text */
+      .hero h1 {
+        font-family: "Raleway", sans-serif;
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: #2e4d35;
+      }
+
+      .hero p {
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.2rem;
+        color: #6f6b66;
+        line-height: 1.6;
+      }
+
+      @media (min-width: 769px) {
+        .hero {
+          justify-content: flex-start;
+        }
+
+        .hero-overlay {
+          margin-left: 4rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(rgba(246, 244, 241, 0.85), rgba(246, 244, 241, 0.7));
+          z-index: 0;
+        }
+
+        .hero {
+          min-height: auto;
+          padding: 0;
+          justify-content: center;
+        }
+
+        .hero-overlay {
+          position: relative;
+          z-index: 1;
+          width: 100%;
+          padding: 2.5rem 2rem;
+          text-align: center;
+          border-radius: 1rem;
+        }
+
+        .hero h1 {
+          font-size: 1.9rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+      }
+
+      /* -------------- HERO END ---------------- */
+
       section,
       footer {
         margin: auto;
@@ -293,95 +422,6 @@
           flex-direction: column;
           gap: 1.5rem;
         }
-      }
-
-      header {
-        padding-top: 5rem;
-        padding-bottom: 4rem;
-      }
-
-      .hero {
-        position: relative;
-        width: 100%;
-        height: 80vh; /* adjust for desired hero height */
-        background-image: url("home.webp"); /* your top section image */
-        background-size: cover; /* fill container, maintain aspect ratio */
-        background-position: center; /* center focal point */
-        background-repeat: no-repeat;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .hero-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 30%;
-        height: 100%;
-        background-color: rgba(246, 244, 241, 0.2); /* optional light overlay for readability */
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* left align text */
-        justify-content: center;
-        text-align: center;
-      }
-
-      .hero h1 {
-        font-family: "Raleway", sans-serif;
-        font-size: 3rem;
-        font-weight: 700;
-        color: #2e4d35; /* dark green */
-      }
-
-      .hero p {
-        font-family: "Open Sans", sans-serif;
-        font-size: 1.3rem;
-        color: #6f6b66; /* soft grey */
-        max-width: 500px; /* optional line limit for readability */
-      }
-
-      h1,
-      h2 {
-        color: var(--accent);
-        font-weight: 500;
-        letter-spacing: 0.02em;
-      }
-
-      h1 {
-        font-size: 2.4rem;
-        margin-bottom: 1.5rem;
-      }
-
-      h2 {
-        font-size: 1.6rem;
-        margin-bottom: 1rem;
-      }
-
-      h3 {
-        color: var(--accent);
-        margin-top: 1.5rem;
-        margin-bottom: 0.5rem;
-        font-size: 1.1rem;
-      }
-
-      p {
-        color: var(--text-muted);
-        margin: 0.5rem 0 0;
-      }
-
-      a {
-        color: var(--text-main);
-        text-decoration: underline;
-        text-underline-offset: 4px;
-      }
-
-      a:hover {
-        opacity: 0.8;
-      }
-
-      iframe {
-        border-radius: 12px;
       }
 
       footer {
