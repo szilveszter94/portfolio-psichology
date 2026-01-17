@@ -1029,7 +1029,9 @@
         link.addEventListener("click", (e) => {
           e.preventDefault();
           const target = document.querySelector(link.getAttribute("href"));
-          target.scrollIntoView({ behavior: "smooth" });
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+          }
         });
       });
     </script>
@@ -1040,6 +1042,18 @@
       const toggle = document.querySelector(".nav-toggle");
       const sidebar = document.querySelector(".sidebar");
       const backdrop = document.querySelector(".backdrop");
+
+      document.querySelectorAll("aside a").forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const target = document.querySelector(link.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+          }
+
+          closeSidebar();
+        });
+      });
 
       // Open sidebar
       toggle.addEventListener("click", () => {
