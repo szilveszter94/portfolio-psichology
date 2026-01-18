@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Pszichológus Budapest | Vezetéknév Bianka</title>
+    <title>Pszichológus Budapest | Uhrapka Bianka</title>
 
     <meta
       name="description"
-      content="Vezetéknév Bianka okleveles pszichológus Budapesten. Szorongáskezelés, stresszoldás, párterápia és egyéni tanácsadás bizalmas környezetben." />
+      content="Uhrapka Bianka okleveles pszichológus Budapesten. Szorongáskezelés, stresszoldás, párterápia és egyéni tanácsadás bizalmas környezetben." />
 
     <meta name="robots" content="index, follow" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Pszichológus Budapest | Vezetéknév Bianka" />
+    <meta property="og:title" content="Pszichológus Budapest | Uhrapka Bianka" />
     <meta
       property="og:description"
       content="Okleveles pszichológus Budapesten – pszichológiai tanácsadás felnőtteknek és pároknak." />
@@ -27,7 +27,7 @@
       {
         "@context": "https://schema.org",
         "@type": "Psychologist",
-        "name": "Vezetéknév Bianka",
+        "name": "Uhrapka Bianka",
         "url": "https://yourdomain.hu",
         "telephone": "+36301234567",
         "address": {
@@ -52,7 +52,13 @@
         --bg-card-secondary: #3df1060e; /* paper-like surface */
         --text-main: #2e2c2a; /* soft dark text */
         --text-muted: #6f6b66; /* gentle muted text */
-        --accent: #b9a89a; /* warm beige accent */
+        --accent: #3a463a; /* warm beige accent */
+        --accent2: #2e4d35;
+        --accent-hover: #24402c;
+
+        --accent-mobile: #011301;
+        --main-mobile: #1f3a28;
+        --secondary-mobile: #1d1d1b;
       }
 
       * {
@@ -304,13 +310,31 @@
         font-family: "Raleway", sans-serif;
         font-size: 2.8rem;
         font-weight: 700;
-        color: #2e4d35;
+        color: var(--accent2);
+      }
+
+      .hero-subtitle {
+        display: block;
+        font-size: 1.1rem;
+        color: var(--text-muted);
+        margin-top: 0.3rem;
+      }
+
+      .hero-lead {
+        font-size: 1.1rem;
+        color: var(--text-main);
+        margin-bottom: 1rem;
+      }
+
+      .hero strong {
+        color: var(--accent);
+        font-weight: 600;
       }
 
       .hero p {
         font-family: "Open Sans", sans-serif;
         font-size: 1.2rem;
-        color: #6f6b66;
+        color: var(--text-muted);
         line-height: 1.6;
       }
 
@@ -344,18 +368,23 @@
           z-index: 1;
           width: 100%;
           padding: 2.5rem 2rem;
+          max-width: 80%;
           text-align: center;
           border-radius: 1rem;
         }
 
+        .hero strong {
+          color: var(--accent-mobile);
+        }
+
         .hero h1 {
-          color: #1f3a28;
+          color: var(--main-mobile);
           font-size: 1.9rem;
         }
 
         .hero p {
           font-weight: 500;
-          color: #1d1d1b;
+          color: var(--secondary-mobile);
           font-size: 1.1rem;
         }
       }
@@ -399,6 +428,7 @@
         flex-direction: column;
         justify-content: center;
         padding: 4rem 5rem;
+        font-family: "Open Sans", sans-serif;
       }
 
       .split-content.left {
@@ -415,14 +445,18 @@
         font-family: "Raleway", sans-serif;
         font-size: 2.2rem;
         font-weight: 300;
-        color: #2e4d35;
+        color: var(--accent2);
         margin-bottom: 1rem;
       }
 
+      .split-content strong {
+        color: var(--accent);
+        font-weight: 600;
+      }
+
       .split-content p {
-        font-size: 1rem;
-        color: #6f6b66;
-        max-width: 480px;
+        font-size: 1.2rem;
+        color: var(--text-muted);
         line-height: 1.6;
       }
 
@@ -446,7 +480,7 @@
         }
 
         .split-content {
-          padding: 1rem 0;
+          padding: 1rem 3.5rem;
         }
 
         .split-content.left {
@@ -477,7 +511,6 @@
         grid-template-columns: 1fr 1fr;
         gap: 3rem;
         padding: 4rem 12rem;
-        background-color: #f7f5f2; /* light calm background */
       }
 
       #kapcsolat h2 {
@@ -485,7 +518,7 @@
         font-family: "Raleway", sans-serif;
         font-weight: 300;
         font-size: 2.2rem;
-        color: #2e4d35;
+        color: var(--accent2);
         margin-bottom: 2rem;
         text-align: center;
       }
@@ -494,7 +527,7 @@
       #contact-form {
         max-width: 620px;
         width: 100%;
-        background-color: #ffffff;
+        background-color: var(--bg-card);
         padding: 2.5rem 2.8rem;
         border-radius: 18px;
         box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
@@ -509,7 +542,7 @@
         flex-direction: column;
         font-size: 0.9rem;
         font-weight: 500;
-        color: #3e3e3e;
+        color: var(--text-main);
         gap: 0.35rem;
       }
 
@@ -531,7 +564,7 @@
       #contact-form input:focus,
       #contact-form textarea:focus {
         outline: none;
-        border-color: #2e4d35;
+        border-color: var(--accent2);
         box-shadow: 0 0 0 2px rgba(46, 77, 53, 0.15);
       }
 
@@ -543,8 +576,8 @@
         margin-top: 0.5rem;
         align-self: flex-start;
 
-        background-color: #2e4d35;
-        color: #ffffff;
+        background-color: var(--accent2);
+        color: var(--bg-card);
         font-size: 0.95rem;
         font-weight: 500;
         padding: 0.65rem 1.8rem;
@@ -557,7 +590,7 @@
       }
 
       #contact-form button:hover {
-        background-color: #24402c;
+        background-color: var(--accent-hover);
         transform: translateY(-1px);
       }
 
@@ -567,7 +600,7 @@
         height: 16px;
         margin-left: 0.5rem;
         border: 2px solid rgba(255, 255, 255, 0.4);
-        border-top-color: #fff;
+        border-top-color: var(--bg-card);
         border-radius: 50%;
         animation: spin 0.6s linear infinite;
       }
@@ -582,12 +615,12 @@
         align-items: center;
         gap: 0.5rem;
         font-size: 0.75rem;
-        color: #6f6b66;
+        color: var(--text-muted);
         line-height: 1.4;
       }
 
       #contact-form .gdpr-checkbox a {
-        color: #2e4d35;
+        color: var(--accent2);
         text-decoration: underline;
       }
 
@@ -595,7 +628,7 @@
         width: 18px;
         height: 18px;
         cursor: pointer;
-        accent-color: #2e4d35;
+        accent-color: var(--accent2);
       }
 
       /* ----- Info + Map Column ----- */
@@ -608,12 +641,12 @@
 
       .contact-info p {
         font-size: 1rem;
-        color: #6f6b66;
+        color: var(--text-muted);
         line-height: 1.6;
       }
 
       .contact-info a {
-        color: #2e4d35;
+        color: var(--accent2);
         text-decoration: underline;
       }
 
@@ -677,7 +710,7 @@
       /* ---------- FOOTER START ---------- */
       .site-footer {
         background-color: var(--bg-card); /* calm light tone */
-        color: #6f6b66;
+        color: var(--text-muted);
         padding: 3rem 2rem 2rem;
         font-family: "Open Sans", sans-serif;
         line-height: 1.6;
@@ -695,7 +728,7 @@
       .footer-section h4 {
         font-weight: 700;
         font-size: 1.5rem;
-        color: #2e4d35;
+        color: var(--accent2);
         margin-bottom: 0.8rem;
       }
 
@@ -703,18 +736,18 @@
       .footer-section li {
         font-weight: 500;
         font-size: 1rem;
-        color: #6f6b66;
+        color: var(--text-muted);
         margin-bottom: 0.5rem;
       }
 
       .footer-section a {
-        color: #2e4d35;
+        color: var(--accent2);
         text-decoration: none;
         transition: color 0.25s ease, text-decoration 0.25s ease;
       }
 
       .footer-section a:hover {
-        color: #24402c;
+        color: var(--accent-hover);
         text-decoration: underline;
       }
 
@@ -730,7 +763,7 @@
         text-align: center;
         font-size: 0.9rem;
         font-weight: 500;
-        color: #9a948d;
+        color: var(--text-muted);
       }
 
       /* Mobile responsive */
@@ -762,8 +795,8 @@
       #snackbar {
         visibility: hidden;
         min-width: 280px;
-        background-color: #2e4d35; /* dark green */
-        color: #fff;
+        background-color: var(--accent2);
+        color: var(--bg-card);
         text-align: center;
         padding: 1rem 1.5rem;
         border-radius: 8px;
@@ -794,10 +827,10 @@
   <body>
     <nav class="navbar">
       <div class="nav-logo">
-        <img src="logo.png" alt="Vezetéknév Bianka Logo" />
+        <img src="logo.png" alt="Uhrapka Bianka Logo" />
 
         <div class="nav-title">
-          <span class="first-name">Vezetéknév</span>
+          <span class="first-name">Uhrapka</span>
           <span class="last-name">Bianka</span>
           <span class="profession">Pszichológus & Terapeuta</span>
         </div>
@@ -823,10 +856,16 @@
     </aside>
     <header class="hero">
       <div class="hero-overlay">
-        <h1>Vezetéknév Bianka, Pszichológus.</h1>
+        <h1>
+          Uhrapka Bianka<br />
+          <span class="hero-subtitle">okleveles pszichológus</span>
+        </h1>
+
+        <p class="hero-lead">Amikor úgy érzi, <strong>egyedül már nehéz tovább haladni</strong>.</p>
+
         <p>
-          Okleveles pszichológusként Budapesten segítem klienseimet abban, hogy jobban megértsék önmagukat, csökkentsék
-          a lelki terheiket és megtalálják a számukra megfelelő megoldásokat.
+          Vannak élethelyzetek, amikor elakadunk, kérdések maradnak bennünk, vagy változásra van szükségünk.
+          Biztonságos, ítélkezésmentes térben segítem Önt abban, hogy közösen rátaláljunk a továbblépés lehetőségeire.
         </p>
       </div>
     </header>
@@ -834,14 +873,46 @@
     <main>
       <section id="bemutatkozas" class="split-section primary">
         <div class="split-image">
-          <img src="illustration1.png" alt="Bemutatkozás" />
+          <img src="profile.png" alt="Bemutatkozás" />
         </div>
 
         <div class="split-content right">
           <h2>Bemutatkozás</h2>
+
           <p>
-            Vezetéknév Bianka vagyok, okleveles pszichológus. Munkám során biztonságos, elfogadó és bizalmas légkört
-            biztosítok, ahol a kliensek saját tempójukban dolgozhatnak aktuális nehézségeiken.
+            <strong
+              >Pszichológusként abban támogatom klienseimet, hogy jobban megértsék saját élethelyzetüket, és megtalálják
+              azokat a lépéseket, amelyek a változáshoz vezethetnek.</strong
+            >
+          </p>
+
+          <p>
+            A közös munka során figyelmet fordítunk a nehézségek feltárására, valamint azokra a belső erőforrásokra,
+            amelyek segíthetik a továbblépést.
+          </p>
+
+          <p>
+            <strong>Uhrapka Bianka vagyok</strong>, okleveles pszichológus, autogén tréning vezető, gyászcsoportvezető,
+            valamint képzésben lévő felnőtt komplex integratív terapeuta.
+          </p>
+
+          <p>
+            Pszichológus diplomámat a Debreceni Egyetemen szereztem. Egyetemi éveim alatt ismerkedtem meg az autogén
+            tréning relaxációs módszerével.
+          </p>
+
+          <p>
+            Munkám során analitikusan orientált dinamikus feltáró beszélgetésekkel, relaxációs és imaginációs
+            technikákkal, szupportív terápiával, gyászfolyamat kísérésével, valamint OH-kártyákkal dolgozom.
+          </p>
+
+          <p>
+            Hiszek abban, hogy a terápiás kapcsolat alapja a biztonság, az empátia és az ítélkezésmentes jelenlét.
+            Fontos számomra, hogy klienseim saját ritmusukban haladhassanak.
+          </p>
+
+          <p>
+            <strong><i>Szeretettel várom jelentkezését, és a közös munka elkezdését.</i></strong>
           </p>
         </div>
       </section>
@@ -920,10 +991,10 @@
         <!-- Right column -->
         <div class="contact-info">
           <p>
-            <strong>Vezetéknév Bianka – pszichológus</strong><br />
+            <strong>Uhrapka Bianka – pszichológus</strong><br />
             📍 1051 Budapest<br />
             📞 +36 30 123 4567<br />
-            📧 <a href="mailto:kapcsolat@yourdomain.hu">kapcsolat@yourdomain.hu</a>
+            📧 <a href="mailto:uhrapkabianka@gmail.com">uhrapkabianka@gmail.com</a>
           </p>
 
           <iframe
@@ -945,7 +1016,7 @@
         <!-- Contact info -->
         <div class="footer-section">
           <h4>Kapcsolat</h4>
-          <p>📧 <a href="mailto:info@tothadrienn.com">info@bianka.com</a></p>
+          <p>📧 <a href="mailto:uhrapkabianka@gmail.com">uhrapkabianka@gmail.com</a></p>
           <p>🏠 1025 Budapest, Valami Ö. Valami u. x. II. em.</p>
           <p>🏠 1025 Budapest, Valami u. 51. mfsz. 8.</p>
         </div>
